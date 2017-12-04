@@ -1,4 +1,4 @@
-{% set version = '2.2.0' %}
+{% set version = '2.2.1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/ggplot2_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_{{ version }}.tar.gz
-  sha256: 64d7d9085573b439295bcb58ea4d39ba5d71911dbb501f1e7a30d13740ea2cda
+  sha256: 5fbc89fec3160ad14ba90bd545b151c7a2e7baad021c0ab4b950ecd6043a8314
 
 build:
   number: 0
@@ -53,14 +53,17 @@ test:
 about:
   home: http://ggplot2.tidyverse.org, https://github.com/tidyverse/ggplot2
   license: GPL-2
-  license_file: LICENSE
   summary: A system for 'declaratively' creating graphics, based on "The Grammar of Graphics".
     You provide the data, tell 'ggplot2' how to map variables to aesthetics, what graphical
     primitives to use, and it takes care of the details.
   license_family: GPL2
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
     - ocefpaf
+    - daler
+    - jdblischak
