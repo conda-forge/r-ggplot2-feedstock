@@ -1,4 +1,4 @@
-{% set version = '2.2.1' %}
+{% set version = "3.0.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/ggplot2_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_{{ version }}.tar.gz
-  sha256: 5fbc89fec3160ad14ba90bd545b151c7a2e7baad021c0ab4b950ecd6043a8314
+  sha256: c768f5039ef684c3874a92210a975af52e74f00927ff31c31a73eb1fe139694d
 
 build:
   number: 0
