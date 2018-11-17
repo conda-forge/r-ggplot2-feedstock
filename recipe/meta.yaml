@@ -14,9 +14,9 @@ source:
   sha256: 49e77ccbe1ee9e4278312b001ad34aa1d93a3d98a90aaefcb595da20b2195ed7
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -65,8 +65,7 @@ about:
     You provide the data, tell 'ggplot2' how to map variables to aesthetics, what graphical
     primitives to use, and it takes care of the details.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
