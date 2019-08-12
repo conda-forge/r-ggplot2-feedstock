@@ -1,4 +1,4 @@
-{% set version = '3.2.0' %}
+{% set version = '3.2.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggplot2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggplot2/ggplot2_{{ version }}.tar.gz
-  sha256: 31b6897fb65acb37913ff6e2bdc1b57f652360098ae3aa660abdcf54f84d73b3
+  sha256: e39114a90af69041645b0751ac469d8919c5a7e8cb044a3b56a0728623e65a56
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -58,6 +58,7 @@ test:
 about:
   home: http://ggplot2.tidyverse.org, https://github.com/tidyverse/ggplot2
   license: GPL-2
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
   summary: A system for 'declaratively' creating graphics, based on "The Grammar of Graphics".
     You provide the data, tell 'ggplot2' how to map variables to aesthetics, what graphical
     primitives to use, and it takes care of the details.
@@ -67,9 +68,10 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - ocefpaf
+    - philip-khor
 
 # Package: ggplot2
-# Version: 3.2.0
+# Version: 3.2.1
 # Title: Create Elegant Data Visualisations Using the Grammar of Graphics
 # Description: A system for 'declaratively' creating graphics, based on "The Grammar of Graphics". You provide the data, tell 'ggplot2' how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
 # Authors@R: c( person("Hadley", "Wickham", , "hadley@rstudio.com", c("aut", "cre")), person("Winston", "Chang", , role = "aut"), person("Lionel", "Henry", , role = "aut"), person("Thomas Lin", "Pedersen", role = "aut"), person("Kohske", "Takahashi", role = "aut"), person("Claus", "Wilke", role = "aut"), person("Kara", "Woo", role = "aut"), person("Hiroaki", "Yutani", role = "aut"), person("RStudio", role = c("cph")) )
@@ -86,8 +88,8 @@ extra:
 # RoxygenNote: 6.1.1
 # Encoding: UTF-8
 # NeedsCompilation: no
-# Packaged: 2019-06-13 19:32:10 UTC; thomas
+# Packaged: 2019-08-09 20:11:46 UTC; thomas
 # Author: Hadley Wickham [aut, cre], Winston Chang [aut], Lionel Henry [aut], Thomas Lin Pedersen [aut], Kohske Takahashi [aut], Claus Wilke [aut], Kara Woo [aut], Hiroaki Yutani [aut], RStudio [cph]
 # Maintainer: Hadley Wickham <hadley@rstudio.com>
 # Repository: CRAN
-# Date/Publication: 2019-06-16 14:00:03 UTC
+# Date/Publication: 2019-08-10 22:30:13 UTC
