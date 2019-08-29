@@ -49,6 +49,7 @@ requirements:
     - r-tibble
     - r-viridislite
     - r-withr >=2.0.0
+    - fonts-conda-ecosystem
 
 test:
   requires:
