@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -51,8 +51,11 @@ requirements:
     - r-withr >=2.0.0
 
 test:
+  requires:
+    - r-sysfonts
   commands:
     - $R -e "library('ggplot2')"           # [not win]
+    - $R -e "f <- sysfonts::font_files(); f; stopifnot(nrow(f) > 1)"  # [not win]
     - "\"%R%\" -e \"library('ggplot2')\""  # [win]
 
 about:
