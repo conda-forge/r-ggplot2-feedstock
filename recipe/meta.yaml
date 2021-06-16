@@ -1,4 +1,4 @@
-{% set version = "3.3.3" %}
+{% set version = "3.3.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggplot2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggplot2/ggplot2_{{ version }}.tar.gz
-  sha256: 45c29e2348dbd195bbde1197a52db7764113e57f463fd3770fb899acc33423cc
+  sha256: b77083663077ab57dede2832d69eed476a5e301c568158f90a5b1fb846740692
 
 build:
   merge_build_host: true  # [win]
