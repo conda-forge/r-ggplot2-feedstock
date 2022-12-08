@@ -3,7 +3,7 @@ About r-ggplot2
 
 Home: http://ggplot2.tidyverse.org, https://github.com/tidyverse/ggplot2
 
-Package license: GPL-2.0-only
+Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggplot2-feedstock/blob/main/LICENSE.txt)
 
