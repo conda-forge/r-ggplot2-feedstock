@@ -3,11 +3,13 @@ About r-ggplot2-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggplot2-feedstock/blob/main/LICENSE.txt)
 
-Home: http://ggplot2.tidyverse.org, https://github.com/tidyverse/ggplot2
+Home: http://ggplot2.tidyverse.org
 
 Package license: MIT
 
 Summary: A system for 'declaratively' creating graphics, based on "The Grammar of Graphics". You provide the data, tell 'ggplot2' how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
+
+Development: https://github.com/tidyverse/ggplot2
 
 Current build status
 ====================
