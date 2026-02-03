@@ -1,4 +1,4 @@
-{% set version = "4.0.1" %}
+{% set version = "4.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggplot2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggplot2/ggplot2_{{ version }}.tar.gz
-  sha256: 77151025e8a17eaa043b2685421772e4e30a8a592493780f0a4583ca7b5e0ec4
+  sha256: b915244599222a71ea56e256ba3810e444424190dbc37654de08b366ef144412
 
 build:
   number: 0
